@@ -3,6 +3,8 @@ import service from 'ember-service/inject';
 
 export default Component.extend({
   tagName: 'button',
+  classNames: ['btn btn-primary'],
+
   session: service(),
   torii: service(),
 
