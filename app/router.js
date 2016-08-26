@@ -13,18 +13,21 @@ Router.map(function() {
   });
   // Per-repo dashboard
   this.route('repos.repo', { path: '/:user/:repo' }, function() {
+    this.route('dashboard', { path: '/' });
     this.route('tasks');
     this.route('issues');
     this.route('milestones');
   });
   // Per-team dashboard
   this.route('team', { path: '/:user/teams/:team' }, function() {
+    this.route('dashboard', { path: '/' });
     this.route('tasks');
     this.route('issues');
     this.route('milestones');
   });
   // Per-user/org dashboard
   this.route('user', { path: '/:user' }, function() {
+    this.route('dashboard', { path: '/' });
     this.route('tasks');
     this.route('issues');
     this.route('milestones');
