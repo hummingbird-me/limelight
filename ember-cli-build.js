@@ -8,6 +8,21 @@ module.exports = function(defaults) {
       includePaths: [
         'bower_components/bootstrap/scss'
       ]
+    },
+    postcssOptions: {
+      compile: { enabled: false },
+      filter: {
+        enabled: true,
+        plugins: [
+          { module: require('postcss-flexbugs-fixes') },
+          {
+            module: require('autoprefixer'),
+            options: {
+              browsers: ['last 2 versions']
+            }
+          }
+        ]
+      }
     }
   });
 
