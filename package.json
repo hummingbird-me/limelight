@@ -1,7 +1,7 @@
 {
-  "name": "emworken",
+  "name": "limelight",
   "version": "0.0.0",
-  "description": "Small description for emworken goes here",
+  "description": "Small description for limelight goes here",
   "private": true,
   "directories": {
     "doc": "doc",

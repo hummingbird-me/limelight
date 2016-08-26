@@ -2,7 +2,7 @@ import service from 'ember-service/inject';
 import BaseAuthenticator from 'ember-simple-auth/authenticators/base';
 
 export default BaseAuthenticator.extend({
-  gatekeeper: 'https://emworken-gatekeeper.herokuapp.com',
+  gatekeeper: 'https://limelight-gatekeeper.herokuapp.com',
   torii: service(),
   ajax: service(),
 
