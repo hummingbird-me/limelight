@@ -1,21 +1,24 @@
 import service from 'ember-service/inject';
-import BaseAuthenticator from 'ember-simple-auth/authenticators/base';
+import { getProperties } from 'ember-metal/get';
+import Torii from 'ember-simple-auth/authenticators/torii';
 
-export default BaseAuthenticator.extend({
+export default Torii.extend({
   gatekeeper: 'https://limelight-gatekeeper.herokuapp.com',
+
   torii: service(),
   ajax: service(),
 
   authenticate() {
-    const torii = this.get('torii');
-    const ajax = this.get('ajax');
-    const gatekeeper = this.get('gatekeeper');
-
-    return torii.open('github-oauth2').then(({authorizationCode}) => {
-      return ajax.request(`${gatekeeper}/authenticate/${authorizationCode}`);
-    }).then(({error, token}) => {
-      if (error) { throw error; }
-      return {token};
+    const { ajax, gatekeeper } = getProperties(this, 'ajax', 'gatekeeper');
+    return this._super('github-oauth2').then((response) => {
+      const { authorizationCode, provider } = response;
+      return ajax.request(`${gatekeeper}/authenticate/${authorizationCode}`)
+        .then(({ error, token }) => {
+          if (error !== undefined) {
+            throw new Error(error);
+          }
+          return { token, provider };
+        });
     });
   }
 });
