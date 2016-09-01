@@ -438,14 +438,14 @@
   white-space: nowrap;
 }
 
-.hide-scroll {
-	@media (min-width:992px) {
-		width: auto;
-		margin-right: -17px;
-		overflow-y: scroll;
-		overflow-scrolling: touch;
-	}
-}
+// .hide-scroll {
+// 	@media (min-width:992px) {
+// 		width: auto;
+// 		margin-right: -17px;
+// 		overflow-y: scroll;
+// 		overflow-scrolling: touch;
+// 	}
+// }
 
 // Content
 
