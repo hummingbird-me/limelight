@@ -7,30 +7,19 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('repos', function() {
+  this.route('dashboard', function() {
     this.route('index', { path: '/' });
     this.route('new');
   });
+
   // Per-repo dashboard
-  this.route('repos.repo', { path: '/:user/:repo' }, function() {
+  this.route('repo', { path: '/:user/:repo' }, function() {
     this.route('dashboard', { path: '/' });
     this.route('tasks');
     this.route('issues');
     this.route('milestones');
-  });
-  // Per-team dashboard
-  this.route('team', { path: '/:user/teams/:team' }, function() {
-    this.route('dashboard', { path: '/' });
-    this.route('tasks');
-    this.route('issues');
-    this.route('milestones');
-  });
-  // Per-user/org dashboard
-  this.route('user', { path: '/:user' }, function() {
-    this.route('dashboard', { path: '/' });
-    this.route('tasks');
-    this.route('issues');
-    this.route('milestones');
+    this.route('bugs');
+    this.route('settings');
   });
 });
 
