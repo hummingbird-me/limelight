@@ -4,6 +4,9 @@
 // Animate CSS
 @import "animate";
 
+// SCSS Variables
+@import "variables";
+
 // Flexbox based Bootstrap v4
 @import "bootstrap-flex";
 
@@ -132,6 +135,7 @@
   border-radius: 3px;
   border: 1px solid rgba(0,0,0,.1);
   transform-origin: top left;
+  top: 75%;
 	>li:not(.dropdown-item)>a {
 	  display: block;
 	  padding: 3px 20px;
@@ -461,4 +465,141 @@
   z-index: 1020;
   background-color: #fff;
   box-shadow: 0 2px 2px rgba(0,0,0,.03),0 1px 0 rgba(0,0,0,.03);
+}
+
+.app-header~.app-body {
+  padding-top: 3.5rem;
+}
+
+.padding {
+  padding: 1.5rem;
+}
+
+.box, .box-color {
+  padding: 1rem;
+  background-color: #fff;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.task-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  .task-status {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 999em;
+    position: relative;
+    top: 5px;
+    margin: 0 5px;
+    border: 1px solid #b5b5b5;
+    background-color: transparent;
+    transition: all .2s ease-in;
+    &:hover, &:focus {
+      border-color: transparent;
+      cursor: pointer;
+      background-color: #fafafa;
+      box-shadow: 0 0 0 2px #b5b5b5;
+    }
+    &.in-progress {
+      background-color: $inProgress;
+      border-color: $inProgress;
+      &:hover, &:focus {
+        background-color: $inProgress;
+        box-shadow: 0 0 0 2px $inProgress;
+      }
+    }
+    &.complete {
+      background-color: $complete;
+      border-color: $complete;
+      &:hover, &:focus {
+        background-color: $complete;
+        box-shadow: 0 0 0 2px $complete;
+      }
+    }
+    &.stuck {
+      background-color: $stuck;
+      border-color: $stuck;
+      &:hover, &:focus {
+        background-color: $stuck;
+        box-shadow: 0 0 0 2px $stuck;
+      }
+    }
+  }
+  .task {
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #efefef;
+    position: relative;
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+  .parent {
+    color: #B9BCC0;
+  }
+}
+
+.task-order {
+  cursor: move;
+  .svgIcon {
+    height: 16px;
+    width: 16px;
+    fill: #a2a2a2;
+    position: relative;
+    top: 3px;
+  }
+  &:hover {
+    .svgIcon {
+      fill: #02ceff;
+      transition: all .2s ease-in;
+    }
+  }
+}
+
+.view-all {
+  display: block;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.milestone-table {
+  text-align: center;
+  font-size: 12px;
+  .milestone-head {
+    th {
+      font-size: 12px;
+      text-align: center;
+      border: none;
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+  .title-wrapper {
+    text-align: left;
+  }
+  .task-title {
+    text-align: left;
+    border: 2px solid #fff;
+    background: #eee;
+  }
+}
+.milestone-status {
+  border: 2px solid #fff;
+  color: #fff;
+  width: 18%;
+  &.in-progress {
+    background-color: $inProgress;
+  }
+  &.complete {
+    background-color: $complete;
+  }
+  &.stuck {
+    background-color: $stuck;
+  }
 }

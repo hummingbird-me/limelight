@@ -2,5 +2,9 @@
 
 <div class="app-content" id="content">
   {{app-header title=(route-name)}}
-  {{outlet}}
+  <div class="app-body">
+    <div class="padding">
+      {{outlet}}
+    </div>
+  </div>
 </div>
