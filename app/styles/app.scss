@@ -273,7 +273,6 @@
   left: 0;
   z-index: 2;
   animation: cloudScroll 20s linear infinite;
-	transition: .2s ease-in;
 }
 
 .app-aside {
@@ -324,7 +323,6 @@
 			height: 35px;
 			display: inline-block;
 			opacity: .5;
-			transition: .2s ease-in;
 			background-color: #fff;
 			&:hover {
 				opacity: .8;
@@ -381,7 +379,6 @@
 				a {
 					text-decoration: none;
 					color: #fff;
-					transition: color .2s ease-in;
 				}
 				border-left: 3px solid #616b6d;
 			}
@@ -521,7 +518,6 @@
   .dropdown-item {
     line-height: 30px;
     background-color: #fff;
-    transition: all .2s ease-in;
     color: #333;
     a {
       cursor: pointer;
@@ -581,7 +577,6 @@
   margin: 0 5px;
   border: 1px solid #b5b5b5;
   background-color: transparent;
-  transition: all .2s ease-in;
   &:hover, &:focus {
     border-color: transparent;
     cursor: pointer;
@@ -602,7 +597,6 @@
   &:hover {
     .svgIcon {
       fill: #02ceff;
-      transition: all .2s ease-in;
     }
   }
 }
@@ -644,7 +638,6 @@
           display: block;
           height: 100%;
           line-height: 38px;
-          transition: background .2s ease-in;
           &:hover {
             background: darken(#eee, 5);
           }
