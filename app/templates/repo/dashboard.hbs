@@ -95,107 +95,125 @@
     <div class="box">
       <h4>Milestones</h4>
 
-      <div class="milestone">
+      <div class="milestones" id="milestones">
         <ul class="milestone-head">
-          <li class="task-title">
-            <div style="color: rgb(87, 155, 252);">
+          <li class="flex-status task-title">
+            <div style="color: #9b59b6;">
               <span>Basic Media Tracking</span>
             </div>
           </li>
-          <li class="task">
+          <li class="flex-status task">
             <span>Design</span>
           </li>
-          <li class="task">
+          <li class="flex-status task">
             <span>Front-end</span>
           </li>
-          <li class="task">
+          <li class="flex-status task">
             <span>API</span>
           </li>
-          <li class="task">
+          <li class="flex-status task">
             <span>Hook-up</span>
           </li>
         </ul>
         <ul class="milestone-row">
-          <li class="task-title">
-            <a href="#">
+          <li class="flex-status task-title">
+            <span class="color-chip" style="background-color: #9b59b6;"></span>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               Media Pages
             </a>
-          </li>
-          <li class="milestone-status in-progress">
-            <a href="#" class="dropdown" data-toggle="dropdown">
-              In Progress
+            <a href="#" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+              </svg>
             </a>
-            <div class="task-dropdown">
-              <a class="dropdown-item in-progress" href="#">
-                <span class="task-status"></span>
-                <span>In Progress</span>
-              </a>
-              <a class="dropdown-item complete" href="#">
-                <span class="task-status"></span>
-                <span>Complete</span>
-              </a>
-              <a class="dropdown-item stuck" href="#">
-                <span class="task-status"></span>
-                <span>Stuck</span>
-              </a>
-            </div>
+            <span class="progress-indicators">
+              <span class="indicator1 in-progress"></span>
+              <span class="indicator2 complete"></span>
+              <span class="indicator3 stuck"></span>
+              <span class="indicator4 in-progress"></span>
+            </span>
           </li>
-          <li class="milestone-status complete">
-            <a href="#" class="dropdown" data-toggle="dropdown">
-              Complete
-            </a>
-            <div class="task-dropdown">
-              <a class="dropdown-item in-progress" href="#">
-                <span class="task-status"></span>
-                <span>In Progress</span>
+          <li class="milestone-wrapper panel-collapse collapse" id="collapseOne" role="tabpanel" aria-labelledby="headingOne">
+            <li class="flex-status milestone-status in-progress">
+              <span class="status-label">Design</span>
+              <a href="#" class="dropdown" data-toggle="dropdown">
+                In Progress
               </a>
-              <a class="dropdown-item complete" href="#">
-                <span class="task-status"></span>
-                <span>Complete</span>
+              <div class="task-dropdown">
+                <a class="dropdown-item in-progress" href="#">
+                  <span class="task-status"></span>
+                  <span>In Progress</span>
+                </a>
+                <a class="dropdown-item complete" href="#">
+                  <span class="task-status"></span>
+                  <span>Complete</span>
+                </a>
+                <a class="dropdown-item stuck" href="#">
+                  <span class="task-status"></span>
+                  <span>Stuck</span>
+                </a>
+              </div>
+            </li>
+            <li class="flex-status milestone-status complete">
+              <span class="status-label">Design</span>
+              <a href="#" class="dropdown" data-toggle="dropdown">
+                Complete
               </a>
-              <a class="dropdown-item stuck" href="#">
-                <span class="task-status"></span>
-                <span>Stuck</span>
+              <div class="task-dropdown">
+                <a class="dropdown-item in-progress" href="#">
+                  <span class="task-status"></span>
+                  <span>In Progress</span>
+                </a>
+                <a class="dropdown-item complete" href="#">
+                  <span class="task-status"></span>
+                  <span>Complete</span>
+                </a>
+                <a class="dropdown-item stuck" href="#">
+                  <span class="task-status"></span>
+                  <span>Stuck</span>
+                </a>
+              </div>
+            </li>
+            <li class="flex-status milestone-status stuck">
+              <span class="status-label">Design</span>
+              <a href="#" class="dropdown" data-toggle="dropdown">
+                Stuck
               </a>
-            </div>
-          </li>
-          <li class="milestone-status stuck">
-            <a href="#" class="dropdown" data-toggle="dropdown">
-              Stuck
-            </a>
-            <div class="task-dropdown">
-              <a class="dropdown-item in-progress" href="#">
-                <span class="task-status"></span>
-                <span>In Progress</span>
+              <div class="task-dropdown">
+                <a class="dropdown-item in-progress" href="#">
+                  <span class="task-status"></span>
+                  <span>In Progress</span>
+                </a>
+                <a class="dropdown-item complete" href="#">
+                  <span class="task-status"></span>
+                  <span>Complete</span>
+                </a>
+                <a class="dropdown-item stuck" href="#">
+                  <span class="task-status"></span>
+                  <span>Stuck</span>
+                </a>
+              </div>
+            </li>
+            <li class="flex-status milestone-status in-progress">
+              <span class="status-label">Design</span>
+              <a href="#" class="dropdown" data-toggle="dropdown">
+                In Progress
               </a>
-              <a class="dropdown-item complete" href="#">
-                <span class="task-status"></span>
-                <span>Complete</span>
-              </a>
-              <a class="dropdown-item stuck" href="#">
-                <span class="task-status"></span>
-                <span>Stuck</span>
-              </a>
-            </div>
-          </li>
-          <li class="milestone-status in-progress">
-            <a href="#" class="dropdown" data-toggle="dropdown">
-              In Progress
-            </a>
-            <div class="task-dropdown">
-              <a class="dropdown-item in-progress" href="#">
-                <span class="task-status"></span>
-                <span>In Progress</span>
-              </a>
-              <a class="dropdown-item complete" href="#">
-                <span class="task-status"></span>
-                <span>Complete</span>
-              </a>
-              <a class="dropdown-item stuck" href="#">
-                <span class="task-status"></span>
-                <span>Stuck</span>
-              </a>
-            </div>
+              <div class="task-dropdown">
+                <a class="dropdown-item in-progress" href="#">
+                  <span class="task-status"></span>
+                  <span>In Progress</span>
+                </a>
+                <a class="dropdown-item complete" href="#">
+                  <span class="task-status"></span>
+                  <span>Complete</span>
+                </a>
+                <a class="dropdown-item stuck" href="#">
+                  <span class="task-status"></span>
+                  <span>Stuck</span>
+                </a>
+              </div>
+            </li>
           </li>
         </ul>
       </div>
