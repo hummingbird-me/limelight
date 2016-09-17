@@ -524,44 +524,44 @@
     }
   }
   .in-progress {
-    &:hover {
-      background-color: lighten($inProgress, 40);
-      color: darken($inProgress, 15);
-    }
     .task-status {
       background-color: $inProgress;
       border-color: $inProgress;
-      &:hover, &:focus {
+    }
+    &:hover {
+      background-color: lighten($inProgress, 40);
+      color: darken($inProgress, 15);
+      .task-status {
         background-color: $inProgress;
-        box-shadow: 0 0 0 2px $inProgress;
+        box-shadow: 0 0 0 1px $inProgress;
       }
     }
   }
   .complete {
-    &:hover {
-      background-color: lighten($complete, 50);
-      color: darken($complete, 15);
-    }
     .task-status {
       background-color: $complete;
       border-color: $complete;
-      &:hover, &:focus {
+    }
+    &:hover {
+      background-color: lighten($complete, 50);
+      color: darken($complete, 15);
+      .task-status {
         background-color: $complete;
-        box-shadow: 0 0 0 2px $complete;
+        box-shadow: 0 0 0 1px $complete;
       }
     }
   }
   .stuck {
-    &:hover {
-      background-color: lighten($stuck, 40);
-      color: darken($stuck, 15);
-    }
     .task-status {
       background-color: $stuck;
       border-color: $stuck;
-      &:hover, &:focus {
+    }
+    &:hover {
+      background-color: lighten($stuck, 40);
+      color: darken($stuck, 15);
+      .task-status {
         background-color: $stuck;
-        box-shadow: 0 0 0 2px $stuck;
+        box-shadow: 0 0 0 1px $stuck;
       }
     }
   }
@@ -656,11 +656,28 @@
         background: none;
       }
     }
+    @media (max-width: 992px) {
+      .task {
+        display: none;
+      }
+    }
   }
   .milestone-row {
     margin-bottom: 2px;
     .task-title a {
       display: block;
+    }
+    @media (max-width: 992px) {
+      display: block;
+      li {
+        width: 100%;
+      }
+    }
+    .task-title {
+      border: none;
+    }
+    .milestone-status {
+      border: none;
     }
   }
   .milestone-status {
@@ -669,6 +686,10 @@
     color: #fff;
     width: 15%;
     position: relative;
+    a {
+      display: block;
+      width: 100%;
+    }
     .dropdown {
       color: #fff;
     }
