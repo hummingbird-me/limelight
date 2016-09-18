@@ -10,9 +10,17 @@
 // Flexbox based Bootstrap v4
 @import "bootstrap-flex";
 
+// Load in Open Sans
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,800';
+
 * {
   box-sizing: border-box;
   transition: all 0.2s ease;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a:focus {
+    outline: none !important;
 }
 
 // Utilities
@@ -204,7 +212,7 @@
 }
 
 .avatar, .avatar img {
-  border-radius: 500px;
+  border-radius: 999em;
 }
 
 .avatar img {
@@ -790,5 +798,217 @@
   }
   @media (min-width: 992px) {
     display: none !important;
+  }
+}
+
+.task-details {
+  @extend .animated;
+  @media (min-width: 544px) {
+    .modal-dialog {
+      max-width: 600px;
+      margin: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .modal-content {
+      height: 100%;
+      border-radius: 0;
+      border: none;
+      padding-top: 150px;
+    }
+  }
+  .modal-content {
+    overflow: auto;
+  }
+  .modal-header {
+    background: #fafafa;
+    border-bottom: 1px solid #eee;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    .public {
+      font-size: 12px;
+      a {
+        color: #2480b2;
+      }
+    }
+    .gh-header-title {
+      font-weight: 800;
+      font-size: 23px;
+      color: #535353;
+      margin-top: 30px;
+    }
+    .gh-header-number {
+      font-size: 15px;
+      font-weight: normal;
+      color: #a2a7ac;
+    }
+    .issue-info {
+      margin-top: 15px;
+      margin-bottom: 10px;
+      .author {
+        color: #000;
+        font-weight: 700;
+      }
+    }
+    .issue-status, .issue-creator {
+      font-size: 12px;
+      border-radius: 3px;
+      border: 1px solid;
+      padding: 3px 10px;
+    }
+    .issue-status {
+      text-transform: uppercase;
+      font-weight: 700;
+      &.open {
+        color: #27ae60;
+        border-color: #b5e2c8;
+      }
+      &.closed {
+        color: #c0392b;
+        border-color: #e4a9a3;
+      }
+    }
+    .issue-creator {
+      border-color: #ddd;
+    }
+  }
+
+  .modal-body {
+    padding: 25px 30px;
+    .subtask-block {
+      border: 1px dashed #ddd;
+      background: #fdfdfd;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    .subtask-head {
+      font-weight: 800;
+      font-size: 12px;
+    }
+    .subtask-list {
+      @extend .clearfix;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      .subtask {
+        @extend .clearfix;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+        margin-bottom: 8px;
+        .task-title {
+          font-size: 14px;
+        }
+        &:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+      }
+      .title-section {
+        float: left;
+        position: relative;
+      }
+      .subtask-owner {
+        float: right;
+        .avatar {
+          width: 25px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
+    .task-description {
+      border-top: 2px solid #eee;
+      margin-top: 30px;
+      padding: 15px;
+    }
+  }
+  .markdown-body {
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+    h1 {
+      padding-bottom: 0.3em;
+      font-size: 1.6em;
+      border-bottom: 1px solid rgb(238, 238, 238);
+    }
+    p {
+      margin-top: 0px;
+      margin-bottom: 16px;
+      font-size: 13px;
+    }
+    ul, ol {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      font-size: 13px;
+    }
+  }
+  &.in {
+    @extend .slideInRight;
+    -webkit-animation-duration: .5s;
+  }
+  .modal-footer {
+    padding: 15px 30px;
+    text-align: left;
+  }
+}
+
+.comment-form {
+  background: #eee;
+  padding: 10px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  .comment-form-textarea {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  .editor-tools {
+    a {
+      padding: 0 10px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: #535353;
+      cursor: pointer;
+      &:hover {
+        fill: #2b87c3;
+      }
+    }
+  }
+}
+
+.discussion {
+  .media-left {
+    width: 50px;
+    .media-object {
+      width: 100%;
+      border-radius: 999em;
+    }
+  }
+  .media-heading {
+    font-weight: 700;
+  }
+  .media-body {
+    font-size: 14px;
+    a {
+      color: #000;
+      font-weight: 700;
+    }
   }
 }
